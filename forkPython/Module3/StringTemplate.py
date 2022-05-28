@@ -25,3 +25,13 @@ print(string)
 #printing template string
 t=Template('I am $name from $city')
 print('Template String =',t.template)
+
+#Escaping $ Sign
+template = Template('$$ is the symbol for $name')
+string = template.substitute(name='Dollar')
+print(string)
+
+#The ${Identifier}
+template = Template( 'That $noun looks ${noun}y')
+string = template.substitute(noun='Fish')
+print(string)
